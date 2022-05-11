@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <h1>{% block title %} Prostate Patient Pathways {% endblock %}</h1>
+   <hr>
+   <ul>
+		<li>Prostate cancer is relatively unique in that there are a number of management options available.</li>
+		<li><b>For localised and locally advanced (non-metastatic prostate cancer).</b></li>
+		<li>Your doctor may talk to you about the prognosis of your cancer (which means how likely you are to die from prostate cancer) 
+		and therefore the value of immediate treatment.</li>
+		<li>To work out this prognosis your doctor will look at your PSA level, your Grade Group (from the biopsy), and the stage of your 
+		cancer (from the MRI or clinical examination). This is then used to derive your Cambridge Prognosis Group (CPG).</li>
+		<li>Which CPG you are in will help the doctor discuss with you if treatment would be beneficial to you or to consider active 
+		surveillance or monitoring instead. This discussion will also including considering any other illness you have and your natural life 
+		expectancy and other factors*.</li>
+		<li>If treatment is being considered; then the treatments options available for your particular type of cancer and the likely side 
+		effects and outcomes can be discussed.</li>
+		<li>This tool aims to inform patients of their options, based on the unbiased guidelines issued by National Institute for Health 
+		Care Excellence (Nice) for their particular type and stage of prostate cancer.</li>
+		<a href="https://www.nice.org.uk/guidance/ng131/chapter/Recommendations#localised-and-locally-advanced-prostate-cancer">
+		See NICE recommendations</a>
+		<li>Comprehensive information is given for each treatment option – including description of what the treatment involves, risks and 
+		benefits of each treatment.</li>
+   </ul>
+   <hr>
+   <ul>
+		<li>Please note that the information about patients options are based on first diagnosis rather than relapse. For information on relapse, please visit the following page(s)</li>
+		<a href="#">Information for relapse patients</a>
+	</ul>
+   <hr>
+   <ul>
+		<li>For further information, you can visit the NICE recommendations:</li>
+		<a href="https://www.nice.org.uk/guidance/ng131/chapter/Recommendations#localised-and-locally-advanced-prostate-cancer">Prostate cancer: diagnosis and management</a>
+		<li>Or the England NHS website:</li>
+		<a href="https://www.england.nhs.uk/wp-content/uploads/2021/07/1831-Policy-for-publication-Final-1.pdf">Brachytherapy dose escalation with external beam radiotherapy for intermediate- and 
+		high-risk localised prostate cancer</a>
+	</ul>
+   <hr>
+   <a href="{{ url_for('create') }}"><strong>Start here!</strong></a>
+   <hr>
+   <p id="demo"></p>
+	<script>
+	document.getElementById("demo").innerHTML = "Date : " + Date();
+	</script>
+	<hr>
+{% endblock %}

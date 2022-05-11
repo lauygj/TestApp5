@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <style>
+	#criteria {
+	  font-family: Arial, Helvetica, sans-serif;
+	  border-collapse: collapse;
+	}
+
+	#criteria td, #criteria th {
+	  border: 1px solid #ddd;
+	  padding: 8px;
+	}
+
+	#criteria tr:nth-child(even){background-color: #f2f2f2;}
+
+	#criteria tr:hover {background-color: #ddd;}
+
+	#criteria th {
+	  padding-top: 12px;
+	  padding-bottom: 12px;
+	  text-align: left;
+	  background-color: #1E90FF;
+	  color: white;
+	}
+   </style>
+   <h1>CPG Group 2</h1>
+   <p>Your prognostic category is – CPG 2.</p>
+   <hr>
+   <p>Your prognostic category was based on the following prognostic criteria. (Please check).</p>
+   <table id = "criteria" style="width:100%">
+		<tr>
+			<th>Grade Group</th>
+			<th>PSA</th>
+			<th>Stage</th>
+		</tr>
+	<!--	<tr>
+			<td>submitted value</td>
+			<td>submitted value</td>
+			<td>submitted value</td>
+		</tr>-->
+		<tr>
+			<td>{{ grade }}</td>
+			<td>{{ psa }}</td>
+			<td>{{ stage }}</td>
+		</tr>
+	</table>
+   <hr>   
+   <p>The prognosis from a CPG2 cancer is good and your risk of dying of prostate cancer is low compared to your risk of dying of 
+   other causes. The risk that the cancer may spread (metastasis) is also usually low. Immediate curative treatment may confer 
+   some benefit to you but needs to be weighed against the risk of side effects and complications. 
+   The alternative is active surveillance and then treatment if there are signs of change in the cancer. 
+   The National Institute for Health Care Excellence currently recommends that men diagnosed with CPG2 cancer are offered a choice 
+   between active surveillance and treatment</p>
+   <hr>
+	<p>For more accurate and personalised information of the likely benefit from treatment you can visit the Prostate Predict website:</p>
+	<p><a href="https://prostate.predict.nhs.uk/">Visit the Predict Prostate NHS Website</a></p>   
+	<hr>
+	 
+	<form method="post">
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary">Management options</button>	
+		</div>
+	</form>	 
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <h1>Active Surveillance</h1>
+   <hr>
+   <p>For more accurate and personalised  information of the likely benefit from treatment you can look at this website</p>
+	<p><a href="https://prostate.predict.nhs.uk/">Visit the Predict Prostate NHS Website</a></p> 
+	<hr>
+<form method="post">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" name="button" value="descriptionAS">Description of active surveillance</button>	
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" name="button" value="benefitsAS">Benefits</button>	
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" name="button" value="risksAS">Risks</button>	
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" name="button" value="animationsAS">Animations and patient videos</button>	
+    </div>	
+</form>
+
+{% endblock %}

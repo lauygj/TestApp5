@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <style>
+	#criteria {
+	  font-family: Arial, Helvetica, sans-serif;
+	  border-collapse: collapse;
+	}
+
+	#criteria td, #criteria th {
+	  border: 1px solid #ddd;
+	  padding: 8px;
+	}
+
+	#criteria tr:nth-child(even){background-color: #f2f2f2;}
+
+	#criteria tr:hover {background-color: #ddd;}
+
+	#criteria th {
+	  padding-top: 12px;
+	  padding-bottom: 12px;
+	  text-align: left;
+	  background-color: #1E90FF;
+	  color: white;
+	}
+   </style>
+   <h1>CPG Group 4</h1>
+   <p>Your prognostic category is – CPG 4.</p>
+   <hr>
+   <p>Your prognostic category was based on the following prognostic criteria. (Please check).</p>
+   <table id = "criteria" style="width:100%">
+		<tr>
+			<th>Grade Group</th>
+			<th>PSA</th>
+			<th>Stage</th>
+		</tr>
+	<!--	<tr>
+			<td>submitted value</td>
+			<td>submitted value</td>
+			<td>submitted value</td>
+		</tr>-->
+	<tr>
+			<td>{{ grade }}</td>
+			<td>{{ psa }}</td>
+			<td>{{ stage }}</td>
+		</tr>	
+	</table>
+   <hr>   
+   <p>The prognosis from a CPG4 cancer is considered poor if left untreated. Treatment is recommended to reduce the risk that 
+   the cancer may spread (metastasis) or cause death. The National Institute for Health Care Excellence currently recommends 
+   that men diagnosed with CPG4 cancer are offered treatment with the intention of cure. Active surveillance is not recommended. 
+   It may be however that you have very significant other medical conditions that will limit your normal life expectancy and 
+   treatment for prostate cancer may do you more harm than good. In this case your doctor will discuss this with you and determine 
+   the best option for you.</p>
+	<hr>
+	 
+	<form method="post">
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary">Management options</button>	
+		</div>
+	</form>	 
+{% endblock %}

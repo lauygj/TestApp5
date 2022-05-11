@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <h1>Docetaxel chemotherapy</h1>
+   <hr>
+	 
+<form method="post">
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" name="button" value="descriptionDC">Description of treatment</button>	
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" name="button" value="benefitsDC">Benefits</button>	
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" name="button" value="risksDC">Risks</button>	
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary" name="button" value="animationsDC">Animations and patient videos</button>	
+    </div>	
+</form>
+
+{% endblock %}

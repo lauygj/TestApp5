@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <h1>Management options for CPG2</h1>
+   <hr>
+	<p>Please note that Active Surveillance is an option for CPG Group 2</p>
+	<p><a href="https://prostate.predict.nhs.uk/">Visit the Predict Prostate NHS Website</a></p>
+	<hr>
+	<p>Offer</p>
+	<form method="post">
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary" name="button" value="activesurveillance">Active surveillance</button>	
+		</div>	
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary" name="button" value="radicalprostectomy">Radical Prostatectomy</button>	
+		</div>
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary" name="button" value="RR6">Radical Radiotherapy with 6 months androgen deprivation therapy</button>	
+		</div>
+		<hr>
+		<p>Consider:</p>
+		<div class="form-group">
+		<button type="submit" class="btn btn-primary" name="button" value="RBB">Radical Radiotherapy with brachytherapy boost</button>	
+		</div>
+	</form>
+{% endblock %}

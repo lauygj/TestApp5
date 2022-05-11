@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <style>
+	#criteria {
+	  font-family: Arial, Helvetica, sans-serif;
+	  border-collapse: collapse;
+	}
+
+	#criteria td, #criteria th {
+	  border: 1px solid #ddd;
+	  padding: 8px;
+	}
+
+	#criteria tr:nth-child(even){background-color: #f2f2f2;}
+
+	#criteria tr:hover {background-color: #ddd;}
+
+	#criteria th {
+	  padding-top: 12px;
+	  padding-bottom: 12px;
+	  text-align: left;
+	  background-color: #1E90FF;
+	  color: white;
+	}
+   </style>
+   <h1>CPG Group 3</h1>
+   <p>Your prognostic category is – CPG 3.</p>
+   <hr>
+   <p>Your prognostic category was based on the following prognostic criteria. (Please check).</p>
+   <table id = "criteria" style="width:100%">
+		<tr>
+			<th>Grade Group</th>
+			<th>PSA</th>
+			<th>Stage</th>
+		</tr>
+<!--		<tr>
+			<td>submitted value</td>
+			<td>submitted value</td>
+			<td>submitted value</td>
+		</tr>-->
+		<tr>
+			<td>{{ grade }}</td>
+			<td>{{ psa }}</td>
+			<td>{{ stage }}</td>
+		</tr>	
+	</table>   
+   <hr>
+   <p> The prognosis from a CPG3 cancer is considered intermediate and your risk of dying of prostate cancer is about the same 
+   compared to your risk of dying of other causes. This however depends on how old you are, your general state of health and 
+   your other medical conditions. There is also be a higher risk of the cancer spreading (metastasis) if left untreated. 
+   Treatment is therefore considered likely to confer benefit to you. The National Institute for Health Care Excellence currently 
+   recommends that men diagnosed with CPG3 cancer are offered treatment with the intention of cure.</p> 
+   <hr>
+   <p>Active surveillance however can still be considered if you are not keen on or are unable to proceed with immediate treatment.</p>
+   	<p><a href="https://prostate.predict.nhs.uk/">Visit the Predict Prostate NHS Website</a></p>
+	<hr>
+	 
+	<form method="post">
+		<div class="form-group">
+			<button type="submit" class="btn btn-primary">Management options</button>	
+		</div>
+	</form>	 
+{% endblock %}
